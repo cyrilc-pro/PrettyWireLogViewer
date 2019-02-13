@@ -283,12 +283,12 @@ var WireLogParser = (function () {
             line = lines[lineNum];
 
             // ignore not wire log
-            if (!line.match(/org\.apache\.http\.wire/)) {
+            if (!line.match(/o\.a\.h\.wire/)) {
                 continue;
             }
 
             // for request
-            found = line.match(/.*http-outgoing-([0-9]+) >> ("?)(.*)\2/);
+            found = line.match(/[\d- :,\.]+ \[(.*)\] \[DEBUG\].*>> ("?)(.*)\2/);
             if (found) {
                 connection = found[1];
                 entity = found[3];
@@ -320,7 +320,7 @@ var WireLogParser = (function () {
             }
 
             // for response
-            found = line.match(/[.]wire.+http-outgoing-([0-9]+) << ("?)(.*)\2/);
+            found = line.match(/[\d- :,\.]+ \[(.*)\] \[DEBUG\].*<< ("?)(.*)\2/);
             if (found) {
                 connection = found[1];
                 entity = found[3];
