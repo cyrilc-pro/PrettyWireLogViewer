@@ -6,7 +6,7 @@ Pretty viewer for wire logging of Apache [HttpClient](http://hc.apache.org/)
 Getting Started
 ---------------
 
-[Sample is here](http://moznion.github.io/PrettyWireLogViewer/)
+[Sample is here](https://cyrilc-pro.github.io/PrettyWireLogViewer/)
 
 If you want to use on your local environment, please access to `index.html`.
 
